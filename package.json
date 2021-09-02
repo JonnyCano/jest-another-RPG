@@ -1,7 +1,6 @@
 {
   "name": "jest-another-rpg",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest"
@@ -17,7 +16,10 @@
     "url": "https://github.com/JonnyCano/jest-another-RPG/issues"
   },
   "homepage": "https://github.com/JonnyCano/jest-another-RPG#readme",
-  "dependencies": {
-    "jest": "^27.1.0"
-  }
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {
+  },
+  "description": ""
 }
