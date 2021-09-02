@@ -6,5 +6,13 @@ test('creates a health potion object', () => {
     expect(potion.name).toBe('health');
     // the expectany method takes a constructor as an argument
     // the value we are putting in the argument expects any Number()
-    expect(potion.value).toBe(expect.any(Number));
+    expect(potion.value).toEqual(expect.any(Number));
+});
+
+test('creates a random potion object', () => {
+    const potion = new Potion();
+
+    expect(potion.name).toEqual(expect.any(String));
+    expect(potion.name.length).toBeGreaterThan(0);
+    expect(potion.value).toEqual(expect.any(Number));
 });
