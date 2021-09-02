@@ -20,6 +20,7 @@
     "lib": "lib"
   },
   "devDependencies": {
+    "jest": "^27.1.0"
   },
   "description": ""
 }
