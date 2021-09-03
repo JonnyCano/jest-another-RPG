@@ -32,7 +32,7 @@ test('checks if enemy is alive or not', () => {
 });
 
 test("gets enemy's attack value", () => {
-    const enemy = new Enemy('Jonny');
+    const enemy = new Enemy('goblin', 'sword');
     enemy.strength = 10;
 
     expect(enemy.getAttackValue()).toBeGreaterThanOrEqual(5);
@@ -40,7 +40,7 @@ test("gets enemy's attack value", () => {
 });
 
 test("subtracts from enemy's health", () => {
-    const enemy = new Enemy('Jonny');
+    const enemy = new Enemy('goblin', 'sword');
     const OldHealth = enemy.health;
 
     enemy.reduceHealth(5);
@@ -50,5 +50,12 @@ test("subtracts from enemy's health", () => {
     enemy.reduceHealth(99999);
 
     expect(enemy.health).toBe(0);
+});
+
+test('gets a description of the enemy', () => {
+    const enemy = new Enemy('goblin', 'sword');
+
+    expect(enemy.getDescription()).toEqual(expect.stringContaining('goblin'));
+    expect(enemy.getDescription()).toEqual(expect.stringContaining('sword'));
 });
 
